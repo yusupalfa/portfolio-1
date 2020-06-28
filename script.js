@@ -10,7 +10,7 @@ function liSlide(li){
         setTimeout(() => {
             li[temp].style.animation = 'liSlide  0.5s ease forwards';
             temp++;
-            if(temp == 4){
+            if(temp == 5){
                 return false;
             }else{
                 liSlide(li);

@@ -10,7 +10,7 @@ body{
 .container{
     position: relative;
     display: grid;
-    grid-template-rows: repeat(2, 667px);
+    grid-template-rows: repeat(5, 100vh) 30px;
 }
 
 
@@ -25,9 +25,15 @@ header h2{
     font-size: 1.7em;
     font-weight: 600;
     padding: 65px 15px;
-    line-height: 45px;
+    line-height: 40px;
     letter-spacing: 2px;
     color: #10122b;
+    text-shadow: 0 0 5px rgba(16, 18, 43,0.4);
+}
+header h2 span{
+    font-weight: 700;
+    font-size: 1.3em;
+    letter-spacing: 0px;
 }
 
 
@@ -56,7 +62,7 @@ nav{
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     transform: translateX(100%);
     transition: 0.8s;
@@ -64,6 +70,7 @@ nav{
 }
 .the-ul li{
     opacity: 0;
+    height: 100px;
 }
 .the-ul li a{
     /* color: white; */
@@ -116,14 +123,18 @@ nav{
 
 
 /*              Container  -      Main                 */
-main{
+main, 
+.achievement,
+.about{
     background-image: url(img/main.jpg);
     background-position: 38% 0%;
     background-size: 1000px;
     background-repeat: no-repeat;
     display: grid;
 }
-.paragraph{
+.paragraph, 
+.paragraph-achievement,
+.paragraph-about{
     display: grid;
     row-gap: 10px;
     width: 70%;
@@ -132,13 +143,19 @@ main{
     justify-self: right;
     place-items: center;
     text-align: center;
+    padding-left: 40px;
 }
-.paragraph h1{
+.paragraph h1,
+.paragraph-achievement h1,
+.paragraph-about h1{
     font-size: 1.7em;
     color: black;
-    text-shadow: 0 0 10px rgba(255,255,255,0.7);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
-.paragraph a{
+.paragraph a,
+.paragraph-achievement a,
+.paragraph-about a,
+.contact a{
     text-decoration: none;
     background-color: #546e62;
     color: white;
@@ -146,7 +163,87 @@ main{
     padding: 5px 0;
     border-radius: 30px;
     transition: 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 .paragraph a:hover{
     background-color: #88a598;
+}
+
+
+
+/*          Container  -        Achievements              */
+.achievement{
+    background-image: url(img/achievement.jpg);
+    background-position: 38% 0%;
+    background-size: 550px;
+}
+.paragraph-achievement{
+    width: 60%;
+    height: 26%;
+    justify-self: left;
+    padding: 0;
+}
+.paragraph-achievement a{
+    background-color: #0c67ad;
+    width: 60%;
+}
+.paragraph-achievement a:hover{
+    background-color: #3a91d3;
+}
+
+
+/*          Container  -        About              */
+.about{
+    background-image: url(img/about.jpg);
+    background-position: 40% 0%;
+    background-size: 550px;
+}
+.paragraph-about{
+    width: 60%;
+    height: 20%;
+    justify-self: center;
+    padding: 0;
+}
+.paragraph-about a{
+    background-color: #6e6879;
+    width: 60%;
+}
+.paragraph-about a:hover{
+    background-color: #afabb8;
+}
+
+
+
+/*          Container  -    Contact              */
+.contact{
+    text-align: center;
+    margin: auto;
+    display: grid;
+    row-gap: 10px;
+}
+.contact h1 span{
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.contact a{
+    place-self: center;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+.contact a:hover{
+    background-color: white;
+    color: black;
+}
+
+/*              Footer               */
+footer{
+    text-align: center;
+    /* background-color: gray; */
+    display: grid;
+}
+footer p{
+    font-size: 0.8em;
+    place-self: center;
 }
