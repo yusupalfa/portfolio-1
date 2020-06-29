@@ -247,3 +247,96 @@ footer p{
     font-size: 0.8em;
     place-self: center;
 }
+
+
+
+/*          Responsive  -   Breakpoints              */
+
+@media (min-width: 768px){
+    .container{
+        grid-template-rows: repeat(5, 100vh) 30px;
+    }
+    header{
+        background-size: 1500px;
+    }
+    header h2{
+        display: grid;
+        width: 60%;
+        font-size: 2em;
+        padding: 0 20px;
+        line-height: 60px;
+        place-content: end;
+        height: 290px;
+    }
+    nav{
+        position: fixed;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo h1{
+        font-weight: 600;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+    }
+    .the-ul{
+        position: inherit;
+        top: 2.2%;
+        width: 65%;
+        height: 30px;
+        background-color: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        transform: translateX(0%);
+    }
+    .the-ul li{
+        opacity: 1;
+    }
+    .the-ul li a{
+        color: black;
+    }
+    .the-ul li a:hover{
+        color: white;
+    }
+    .burger{
+        display: none;
+    }
+    /*              Container  -      Main                 */
+    main{
+        background-size: 1500px;
+    }
+    .paragraph{
+        padding-right: 20px;
+    }
+    .paragraph h1,
+    .paragraph-achievement h1,
+    .paragraph-about h1{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    /*          Container  -        Achievements              */
+    .achievement{
+        background-position: 38% 100%;
+        background-size: 1000px;
+    }
+    .paragraph-achievement{
+        width: 45%;
+        height: 20%;
+    }
+    /*          Container  -        About              */
+    .about{
+        background-size: 1000px;
+    }
+    .paragraph-about{
+        width: 30%;
+    }
+    /*          Container  -    Contact              */
+    .contact h1{
+        font-size: 2.7em;
+    }
+    .contact a{
+        width: 25%;
+    }
+}
