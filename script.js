@@ -59,3 +59,40 @@ function burgerAnimation(){
 }
 
 navSlide();
+
+
+//              DarkMode
+
+const black = document.getElementsByClassName('black');
+const hamburger = document.querySelectorAll('nav .burger span');
+const TombolContact = document.querySelector('.contact .Tombolcontact');
+const heela = document.querySelector('nav .darkMode');
+const body = document.querySelector('body');
+
+heela.addEventListener('click', function(){
+    heela.classList.toggle('on');
+    if(heela.classList.contains('on')){
+        TombolContact.style.color = 'black';
+        TombolContact.style.backgroundColor = 'white';
+        // TombolContact.style.border = '1px solid black';
+        for(let i = 0; i < black.length; i++){
+            black[i].style.transition = '0.5s';
+            black[i].style.color = 'white';
+            hamburger[i].style.backgroundColor = 'white';
+            body.style.transition = '1s';
+            body.style.backgroundColor = 'rgba(0,0,0,0.95)';
+        }
+        
+    }else{
+        TombolContact.style.color = 'white';
+        TombolContact.style.backgroundColor = 'black';
+        // TombolContact.style.border = '1px solid black';
+        for(let i = 0; i < black.length; i++){
+            black[i].style.transition = '0.5s';
+            black[i].style.color = 'black';
+            hamburger[i].style.backgroundColor = 'black';
+            body.style.transition = '1s';
+            body.style.backgroundColor = 'white';
+        }
+    }
+});

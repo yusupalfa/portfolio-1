@@ -37,6 +37,7 @@ header h2 span{
 }
 
 
+
 /*                  Header - Navbar           */
 nav{
     position: fixed;
@@ -48,7 +49,7 @@ nav{
     transition: 0.8s;
 }
 .logo h1{
-    /* color: white; */
+    cursor: pointer;
     font-weight: 600;
     font-size: 1.2em;
     letter-spacing: 2px;
@@ -226,10 +227,11 @@ main,
     font-weight: 600;
 }
 .contact a{
+    box-shadow: none;
     place-self: center;
     background-color: black;
     color: white;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     transition: 0.5s;
 }
 .contact a:hover{
